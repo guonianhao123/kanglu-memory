@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>康鹭地图 · 康鹭记忆</title>
+<meta name="description" content="广州康鹭片区意象地图：产业空间、生活服务、治理节点、交通连接与区域外联五个图层，点击节点查看田野记录。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="map">
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><span>康</span></span>
+      <span class="brand-txt"><b>康鹭记忆</b><i>KANGLU MEMORY</i></span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单"><i></i></button>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">首页</a>
+      <a href="background.html" data-nav="background">背景资料</a>
+      <a href="timeline.html" data-nav="timeline">编年时间轴</a>
+      <a href="map.html" data-nav="map">康鹭地图</a>
+      <a href="people.html" data-nav="people">人物档案</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">首页</a> / 康鹭地图</p>
+    <h1>康鹭地图</h1>
+    <p class="lead">
+      这是一张<b>关系地图</b>，而不是测绘图。它不追求坐标准确，而是试图把供应、用工、出货、治理
+      这四张网络如何折叠在同一平方公里之内画出来。点击任一节点，查看该处空间的田野记录。
+    </p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="map-layout">
+      <!-- 地图 -->
+      <div>
+        <div class="map-tools">
+          <div id="mapFilters" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+          <span class="map-note">RELATIONAL MAP · NOT TO SCALE</span>
+        </div>
+
+        <div class="map-stage">
+          <svg id="kangluMap" viewBox="0 0 1000 680" role="img" aria-label="康鹭片区意象地图"></svg>
+        </div>
+
+        <div class="legend">
+          <span><i style="background:#9c3b2a"></i>产业空间</span>
+          <span><i style="background:#4a6152"></i>生活服务</span>
+          <span><i style="background:#2f4459"></i>治理节点</span>
+          <span><i style="background:#7a6a45"></i>交通连接</span>
+          <span><i style="background:#5f4a58"></i>区域外联</span>
+          <span style="margin-left:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em">
+            共 <span id="poiCount">—</span> 处标注 · <span id="layerCount">—</span> 个图层
+          </span>
+        </div>
+      </div>
+
+      <!-- 详情面板 -->
+      <aside>
+        <div class="map-panel">
+          <div id="panelBody"></div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h4 style="font-size:15px">空间关系速览</h4>
+          <div id="relList" style="display:flex;flex-direction:column;gap:14px;margin-top:12px"></div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h4 style="font-size:15px">节点索引</h4>
+          <div id="poiList" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 空间读法 -->
+<section style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Reading the Space</p>
+      <h2 class="h-sec">三种读图方式</h2>
+    </div>
+    <div class="three-col">
+      <div class="card reveal">
+        <h4>① 竖着读：楼层分工</h4>
+        <p>一栋握手楼里，往往一楼是档口或辅料店，中间楼层是作坊，顶层是加盖的铁皮房——
+           也是面积最大、租金最低、最容易被认定为违建的部分。产业在垂直方向上完成了自我堆叠。</p>
+      </div>
+      <div class="card reveal">
+        <h4>② 横着读：十分钟半径</h4>
+        <p>从中大布匹市场选料，到村内加工，再到凌晨发往十三行——全部发生在步行十分钟与车程半小时的半径内。
+           「去哪里都快」是康鹭速度的物理前提。</p>
+      </div>
+      <div class="card reveal">
+        <h4>③ 往外读：80 公里</h4>
+        <p>广清产业园在 80 公里之外。这个距离意味着「当天接单、当天出货」不再成立，
+           也意味着印花、烫钻、洗水这些「就在楼下」的配套工序需要重新组织。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <h5>关于本站</h5>
+      <p>康鹭记忆是一项数字人文教学研究项目，以广州海珠康乐村、鹭江村的制衣产业为对象，尝试用结构化数据、空间标注与人物档案的方式，保存一场正在发生的城市变迁。</p>
+    </div>
+    <div>
+      <h5>站点地图</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="background.html">背景资料</a></li>
+        <li><a href="timeline.html">编年时间轴</a></li>
+        <li><a href="map.html">康鹭地图</a></li>
+        <li><a href="people.html">人物档案</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>引用与声明</h5>
+      <p>本图为课题组绘制的意象示意图，用于表达空间关系，不具备测绘精度，不可用于地籍、规划等实务用途。</p>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 康鹭记忆 · Kanglu Memory Digital Humanities Project</span>
+    <span>数据整理自公开新闻报道与政府公开文件</span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/map.js"></script>
+<script>initReveal();</script>
+</body>
+</html>

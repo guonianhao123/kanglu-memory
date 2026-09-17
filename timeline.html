@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编年时间轴 · 康鹭记忆</title>
+<meta name="description" content="广州康鹭制衣村编年时间轴：从 1980 年代末的零散布摊到 2026 年首期复建地块动工，共 13 个节点，标注所属阶段与主题标签。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="timeline">
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><span>康</span></span>
+      <span class="brand-txt"><b>康鹭记忆</b><i>KANGLU MEMORY</i></span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单"><i></i></button>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">首页</a>
+      <a href="background.html" data-nav="background">背景资料</a>
+      <a href="timeline.html" data-nav="timeline">编年时间轴</a>
+      <a href="map.html" data-nav="map">康鹭地图</a>
+      <a href="people.html" data-nav="people">人物档案</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">首页</a> / 编年时间轴</p>
+    <h1>编年时间轴</h1>
+    <p class="lead">
+      从 1980 年代末中山大学南门对面的零散布摊，到 2026 年首期复建地块动工——
+      四十余年间，这片不到 1.1 平方公里的土地上，走完了产业聚集、模式定型、旧改启动的完整周期。
+      以下按时间顺序排列，每个节点标注所属阶段与主题标签。
+      <br><b class="small">时间线以公开报道与政府公开文件为准，数据口径见<a href="background.html#refs" style="color:var(--red)">参考文献</a>；2026 年 8 月的田野走访见<a href="background.html#field" style="color:var(--red)">背景资料</a>。</b>
+    </p>
+  </div>
+</section>
+
+<div class="wrap" style="margin-top:30px">
+  <div class="phase-strip reveal" id="phaseStrip"></div>
+</div>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="filter-bar">
+      <span class="fl">主题</span>
+      <div id="tlFilters" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+    </div>
+
+    <p class="small muted" style="margin:-12px 0 24px">
+      当前显示 <b id="tlShown" style="color:var(--red)">0</b> 个节点 · 共 <span id="tlCount">—</span> 个
+    </p>
+
+    <ul class="tl" id="tlFull"></ul>
+  </div>
+</section>
+
+<!-- ===== 怎么读 ===== -->
+<section style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <p class="eyebrow">Reading Note</p>
+        <h2 class="h-sec">怎么读这条时间轴</h2>
+        <p class="lead">
+          时间轴不追求宏大叙事，而是把政策节点与村里日常并置，形成对照。
+          每个节点右上角标注两个信息：所属<strong>阶段</strong>（产业走到哪一步）与<strong>主题标签</strong>（这件事属于哪个方面）。
+        </p>
+        <div class="card" style="margin-bottom:16px">
+          <h4>与人物档案对照读</h4>
+          <p>同一个年份，在不同位置上落出的形状不一样。2023 年春天同时发生着拆违、搬迁与观望，
+             把编年与<a href="people.html" style="color:var(--red)">人物档案</a>并排看，政策才落到具体的人身上。</p>
+        </div>
+        <div class="card">
+          <h4>两个时间口径</h4>
+          <p>时间轴中的「2026 年 3 月」指 F50、F56 首建安置地块动工这一事件；
+             课题组的田野访谈时间为 2026 年 8 月，两者不要混读。</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Legend</p>
+        <h2 class="h-sec">主题标签</h2>
+        <p class="lead">七个标签用于区分节点性质，可在上方筛选。</p>
+        <div class="refs" style="list-style:none">
+          <ul style="list-style:none;padding:0;margin:0" id="tagLegend"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <h5>关于本站</h5>
+      <p>康鹭记忆是一项数字人文教学研究项目，以广州海珠康乐村、鹭江村的制衣产业为对象，尝试用结构化数据、空间标注与人物档案的方式，保存一场正在发生的城市变迁。</p>
+    </div>
+    <div>
+      <h5>站点地图</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="background.html">背景资料</a></li>
+        <li><a href="timeline.html">编年时间轴</a></li>
+        <li><a href="map.html">康鹭地图</a></li>
+        <li><a href="people.html">人物档案</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>引用与声明</h5>
+      <p>人物档案由课题组录入维护，人名一律使用化名；地图为意象示意图，统计数据标注来源口径。内容仅用于教学与研究，转载请注明出处。</p>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 康鹭记忆 · Kanglu Memory Digital Humanities Project</span>
+    <span>数据整理自公开新闻报道与政府公开文件</span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  /* 阶段脉络条：按数据顺序取阶段，附节点数 */
+  const PHASE_ORDER = [...new Set(TIMELINE.map(t => t.phase))];
+  document.getElementById('phaseStrip').innerHTML = PHASE_ORDER.map((ph, i) => {
+    const n = TIMELINE.filter(t => t.phase === ph).length;
+    const arrow = i < PHASE_ORDER.length - 1 ? '<span class="ar">→</span>' : '';
+    return `<span class="ph">${ph} <b>${n}</b></span>${arrow}`;
+  }).join('');
+
+  /* 主题标签图例（同时用于筛选按钮） */
+  const TAG_DESC = {
+    '产业': '生产组织、产能与模式变化',
+    '人口': '从业者来源与构成的变化',
+    '政策': '政府文件、规划与产业引导',
+    '治理': '拆违、综合整治与秩序管理',
+    '空间': '场地与设施的改造',
+    '社会': '公共关注与日常生活的变化',
+    '研究': '田野观察与学术记录'
+  };
+  const TAGS = [...new Set(TIMELINE.map(t => t.tag))];
+  document.getElementById('tagLegend').innerHTML = TAGS.map(t => {
+    const n = TIMELINE.filter(x => x.tag === t).length;
+    return `<li style="display:block;padding:10px 0;border-bottom:1px solid var(--line)">
+      <b style="display:inline-block;min-width:56px">${t}</b>
+      <span style="font-size:13px;color:var(--ink-2)">${TAG_DESC[t] || ''}</span>
+      <span style="float:right;font-family:var(--mono);font-size:11px;color:var(--ink-3)">${n} 个节点</span></li>`;
+  }).join('');
+
+  /* 渲染全量编年 */
+  renderTimeline('#tlFull');
+  document.getElementById('tlCount').textContent = TIMELINE.length;
+
+  /* 主题筛选 */
+  let curTag = '全部';
+  const bar = document.getElementById('tlFilters');
+  const counts = {};
+  TIMELINE.forEach(t => { counts[t.tag] = (counts[t.tag] || 0) + 1; });
+  bar.innerHTML = ['全部'].concat(TAGS).map(t => {
+    const n = t === '全部' ? TIMELINE.length : counts[t];
+    return `<button class="chip ${t === curTag ? 'on' : ''}" data-tag="${t}">${t} <span style="opacity:.6">${n}</span></button>`;
+  }).join('');
+
+  function applyTag(){
+    const items = $$('#tlFull .tl-item');
+    let shown = 0;
+    items.forEach(el => {
+      const ok = curTag === '全部' || el.dataset.tag === curTag;
+      el.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    document.getElementById('tlShown').textContent = shown;
+    initReveal();
+  }
+
+  bar.addEventListener('click', e => {
+    const b = e.target.closest('[data-tag]');
+    if (!b) return;
+    curTag = b.dataset.tag;
+    $$('.chip', bar).forEach(x => x.classList.toggle('on', x === b));
+    applyTag();
+  });
+
+  applyTag();
+</script>
+</body>
+</html>

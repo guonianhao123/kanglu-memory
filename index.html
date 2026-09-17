@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>康鹭记忆 · 广州康鹭制衣村数字人文调研</title>
+<meta name="description" content="康鹭记忆：以数字人文方法记录广州海珠康乐村、鹭江村制衣产业的空间、产业与人物档案。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<!-- ============ 顶栏 ============ -->
+<header class="site-head">
+  <div class="head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><span>康</span></span>
+      <span class="brand-txt">
+        <b>康鹭记忆</b>
+        <i>KANGLU MEMORY</i>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="菜单"><i></i></button>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">首页</a>
+      <a href="background.html" data-nav="background">背景资料</a>
+      <a href="timeline.html" data-nav="timeline">编年时间轴</a>
+      <a href="map.html" data-nav="map">康鹭地图</a>
+      <a href="people.html" data-nav="people">人物档案</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Digital Humanities · Field Archive 2023–2026</p>
+      <h1>一平方公里的<br><em>中国快时尚心脏</em></h1>
+      <p class="lead">
+        这里是广州市海珠区的康乐村与鹭江村，合称「康鹭片区」，广州城市中轴线从这片区域穿越而过。
+        约 1.1 平方公里的土地上，聚集了超过 5200 家制衣厂与仓储企业、约 13 万常住人口，
+        以「早上看货、次日出货」的 24 小时节奏，支撑着全国快时尚供应链中最具弹性的一环。
+        2023 年起，片区进入「拆、治、兴」的更新改造进程——
+        本课题以数字人文的方法，记录这场正在发生的变迁中，那些关于空间、劳作与人的细节。
+      </p>
+      <dl class="hero-meta">
+        <div><dt>Research Site</dt><dd>海珠区凤阳街道 康乐村 · 鹭江村</dd></div>
+        <div><dt>Method</dt><dd>田野观察 · 口述整理 · 空间标注</dd></div>
+        <div><dt>Records</dt><dd><span id="recPeople">—</span> 份人物档案 · <span id="recPoi">—</span> 处空间节点</dd></div>
+      </dl>
+    </div>
+
+    <aside class="hero-card">
+      <h4>调研说明</h4>
+      <ol>
+        <li>人物档案依据课题组田野访谈整理录入，<b>人名一律使用化名</b>，涉及地点只写到村、街一级。</li>
+        <li>「康鹭地图」为课题组绘制的意象示意图，用于表达空间关系与功能分区，<b>不具备测绘精度</b>，不可用于地籍、规划等实务用途。</li>
+        <li>时间轴与统计口径见<a href="background.html#refs" style="color:var(--red)">参考文献</a>；不同来源存在统计差异，页面已标注取用口径。</li>
+        <li>本站为教学与研究用途的数字人文成果展示，欢迎指正与补充。</li>
+      </ol>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<!-- ============ 板块入口 ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Navigate the Archive</p>
+      <h2 class="h-sec">四个切面，进入康鹭</h2>
+      <p class="lead">历史脉络、时间纵深、空间结构、个体命运——我们把调研成果拆成四个可以逐层翻阅的入口。</p>
+    </div>
+
+    <div class="entries">
+      <a class="entry reveal" href="background.html">
+        <span class="bgmark">壹</span>
+        <span class="idx">01 / CONTEXT</span>
+        <h3>背景资料</h3>
+        <p>从 1980 年代末的布匹摊位，到 2026 年改造动工。编年脉络、产业链拆解、改造政策，以及 2026 年 8 月的田野观察。</p>
+        <span class="arrow">进入</span>
+      </a>
+      <a class="entry reveal" href="timeline.html">
+        <span class="bgmark">贰</span>
+        <span class="idx">02 / CHRONICLE</span>
+        <h3>编年时间轴</h3>
+        <p><span id="tlCountCard">—</span> 个节点，从 1980 年代末的布匹摊位到 2026 年首建地块动工。每个节点标注所属阶段与主题标签，可按主题筛选，并与人物档案对照阅读。</p>
+        <span class="arrow">进入</span>
+      </a>
+      <a class="entry reveal" href="map.html">
+        <span class="bgmark">叁</span>
+        <span class="idx">03 / SPACE</span>
+        <h3>康鹭地图</h3>
+        <p>可交互的片区意象图：招工广场、招工街、铁皮房、首拆现场、中大布匹市场与 80 公里外的清远产业园。点击任一节点查看田野记录。</p>
+        <span class="arrow">进入</span>
+      </a>
+      <a class="entry reveal" href="people.html">
+        <span class="bgmark">肆</span>
+        <span class="idx">04 / PEOPLE</span>
+        <h3>人物档案</h3>
+        <p>口述档案卡片：制衣工人、制衣厂主与社区一线工作者。人名一律使用化名，可按身份筛选与关键词检索，点击进入完整档案。</p>
+        <span class="arrow">进入</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 时间轴预览 ============ -->
+<section class="tight" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Chronology</p>
+      <h2 class="h-sec">三十余年，一条时间线</h2>
+      <p class="lead">从自发形成的布匹摊位，到全中国最贵的城中村改造项目。灰色节点表示历史阶段，红色节点表示仍在延续的日常。</p>
+    </div>
+    <ul class="tl" id="tlPreview"></ul>
+    <div class="tl-more"><a class="btn ghost" href="timeline.html">查看完整编年（<span id="tlCountAll">—</span> 条）</a></div>
+  </div>
+</section>
+
+<!-- ============ 引言 ============ -->
+<section>
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <p class="eyebrow">Why It Matters</p>
+        <h2 class="h-sec">为什么值得被记录</h2>
+        <p class="lead">
+          康鹭不是一个可以被简单归纳的地方。它既是全球最大面辅料市场的下游车间，
+          也是十几万外来务工者的栖身之所；它用「小单快反」把服装生产的速度推向极致，
+          也用握手楼、铁皮房和一线天，把城市化的代价压缩在一平方公里之内。
+        </p>
+        <blockquote class="pull">
+          如果说整个产业生态是大池塘，小微工厂和家庭作坊就是数万个小蝌蚪。
+          小蝌蚪既离不开大池塘，也维持着它的生命力。
+          <cite>—— 广东省湖北商会服饰时尚产业协会会长 梁富斌</cite>
+        </blockquote>
+        <p class="lead">
+          当改造的推土机驶入，最先消失的往往是那些从未被写下的东西：
+          一句招工的行话、一本记着「还差多少钱买厂」的笔记本、凌晨三点踩缝纫机的节奏。
+          数字人文能做的，是把这些碎片结构化、可检索、可回访。
+        </p>
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow">Methodology</p>
+        <h2 class="h-sec">我们怎么做</h2>
+        <div class="card" style="margin-bottom:18px">
+          <h4>① 文献与报道的结构化抽取</h4>
+          <p>系统梳理 2012 年以来的学术调研、媒体报道与政府公开文件，将散落的事实抽取为「时间—空间—人物」三类实体，建立可交叉检索的底层数据集。</p>
+        </div>
+        <div class="card" style="margin-bottom:18px">
+          <h4>② 口述片段的档案化</h4>
+          <p>将报道中的直接引语作为「口述证据」单独抽取，与人物身份、年限、厂房规模等字段绑定，形成可比对的人物档案卡片。</p>
+        </div>
+        <div class="card" style="margin-bottom:18px">
+          <h4>③ 空间的意象标注</h4>
+          <p>放弃追求测绘精度，转而绘制「关系地图」：标注的不是坐标，而是供应、用工、出货、治理四条关系网络如何在空间上折叠。</p>
+        </div>
+        <div class="card">
+          <h4>④ 可视化的叙事编排</h4>
+          <p>以编年、产业链流程、地图节点与人物卡片四种视图呈现同一份数据，让不同背景的读者都能找到进入的角度。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 数字概览 ============ -->
+<section style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">At a Glance</p>
+      <h2 class="h-sec">片区人口与产业构成</h2>
+      <p class="lead">以下比例依据公开报道整理，反映 2023 年前后的典型状态，仅供研究参考。</p>
+    </div>
+    <div class="bars" id="bars"></div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <h5>关于本站</h5>
+      <p>康鹭记忆是一项数字人文教学研究项目，以广州海珠康乐村、鹭江村的制衣产业为对象，尝试用结构化数据、空间标注与人物档案的方式，保存一场正在发生的城市变迁。</p>
+    </div>
+    <div>
+      <h5>站点地图</h5>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="background.html">背景资料</a></li>
+        <li><a href="timeline.html">编年时间轴</a></li>
+        <li><a href="map.html">康鹭地图</a></li>
+        <li><a href="people.html">人物档案</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>引用与声明</h5>
+      <p>人物档案由课题组录入维护，人名一律使用化名；地图为意象示意图，统计数据标注来源口径。内容仅用于教学与研究，转载请注明出处。</p>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 康鹭记忆 · Kanglu Memory Digital Humanities Project</span>
+    <span>数据整理自公开新闻报道与政府公开文件</span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/people-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById('recPeople').textContent = PEOPLE.length;
+  document.getElementById('recPoi').textContent = POIS.length;
+  document.getElementById('tlCountAll').textContent = TIMELINE.length;
+  document.getElementById('tlCountCard').textContent = TIMELINE.length;
+  renderStats('#stats');
+  renderTimeline('#tlPreview', 6);
+
+  // 人口与产业构成
+  const BARS = [
+    { l:'湖北籍从业者', v:80, c:'var(--red)',    t:'80%' },
+    { l:'外来人口占比', v:95, c:'var(--indigo)', t:'95%以上' },
+    { l:'40人以下企业', v:93, c:'var(--ochre)',  t:'92.9%（2012调研）' },
+    { l:'无技术研发投入', v:87, c:'var(--plum)', t:'86.5%（2012调研）' },
+    { l:'日结工占主流', v:70, c:'var(--green)',  t:'旺季为主流用工' }
+  ];
+  document.getElementById('bars').innerHTML = BARS.map(b => `
+    <div class="bar-row reveal">
+      <span class="bl">${b.l}</span>
+      <span class="bar-track"><span class="bar-fill" style="background:${b.c}" data-w="${b.v}"></span></span>
+      <span class="bv">${b.t}</span>
+    </div>`).join('');
+
+  initReveal(); initCounters(); initBars();
+</script>
+</body>
+</html>
